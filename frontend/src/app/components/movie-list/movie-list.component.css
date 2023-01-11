@@ -1,0 +1,108 @@
+html,body,#root{
+    margin:0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+  }
+
+.movieList{
+    padding: 30px;
+
+}
+
+.Buttons{
+    text-align: left;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+}
+.displayCard {
+  text-align: center;
+}
+.card {
+  /* max-width: 50%; */
+  display: inline-block;
+  border:2px;
+  border-color: black;
+}
+.card-container{
+    /* width: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px; */
+    /* margin: 25px;
+    padding:5px;
+    float:left;
+    margin-left:20px; */  
+    /* margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 2.5rem; */
+  float:left;
+
+  margin: 20px;
+  width: 300px;
+  height: 650px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.5s;
+  animation: ease-in-out;
+}
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px 0px;
+}
+.card-container  img {
+    overflow: hidden;
+    width: 100%;
+  }
+.fixed-bottom{
+    text-align: center;
+    position: fixed;
+    bottom: 1px;
+    left:0px;
+    background-color: white;
+    margin:auto;
+    box-shadow: 0px 0px 5px;
+    border-radius: 5px;
+
+    /* margin-left: auto; 
+    margin-right: auto; */
+}
+
+@media screen and (max-width: 830px) {
+  .card {
+    padding: 1%;
+    display: inline-block;
+  }
+}
+.pagination button {
+    background: #428bca;
+    color: #fff !important;
+  }
+  .pagination span {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+  }
+
+.card-container p{
+  font-weight: bold;
+}
+.card-container span{
+  font-size: large;
+}
+  button:disabled {
+    background: rgb(245, 123, 17) !important;
+  }
+  button {
+    font-family: Arial;
+    background-color: rgb(245, 123, 17);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+  }
+.for-search{
+  text-align: center;
+}

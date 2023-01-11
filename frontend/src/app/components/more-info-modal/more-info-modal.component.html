@@ -1,0 +1,15 @@
+<!--the modal component of more info-->
+<div class="modal-header" style="background-color: gainsboro;" *ngFor="let item of currentMovie">
+    <h4 class="modal-title">{{item.Title}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body" *ngFor="let item of currentMovie">
+    <span>Genre</span><p>{{item.Genre}}</p>
+    <span>Released</span><p>{{item.Released}}</p>
+    <span>Actors</span><p>{{item.Actors}}</p>
+    <span>Runtime</span><p>{{item.Runtime}}</p>
+    <span>Language</span><p>{{item.Language}}</p>
+    <span>Plot</span><p>{{item.Plot}}</p>
+</div>

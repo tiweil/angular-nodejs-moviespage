@@ -1,0 +1,24 @@
+<div class="for-search">
+    <input type="text" placeholder="type the name of movie" formControlName="search" #search>&nbsp;
+    <button (click)="searchMovie(search.value)">search</button>&nbsp;
+    <button (click)="reset()">reset</button>
+</div>
+<div class="movieList">
+    <div class="displayCard">
+        <div class="card" *ngFor="let item of myProds | slice: (curPage * pageSize) - pageSize :curPage * pageSize">
+            <div class="card-container" id={{item.id}}>
+                <img class="image" src={{item.image}} />
+                <!-- <p>{{item.name}}</p> -->
+                <p><span>{{item.title}}</span></p>
+                <p>{{item.fullTitle}}</p>
+                <p>{{item.imDbRating}}⭐</p>
+                <button class="btn btn-success" (click)="openModal(item.id)">More Details</button>
+            </div>
+        </div>
+    </div>
+    <p class="pagination">
+        <button [disabled]="curPage == 1" (click)="curPage = curPage - 1">PREV</button>
+        <span>Page {{curPage}} of {{ numberOfPages() }}</span>
+        <button style="background-color: rgb(245, 123, 17);" [disabled]="curPage >= myProds.length/pageSize" (click)="curPage = curPage + 1">NEXT</button>
+    </p>
+</div>
